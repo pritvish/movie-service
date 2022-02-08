@@ -32,12 +32,12 @@ public class MovieController {
     }
 
     @GetMapping("/moviesByYear/{year}")
-    public ResponseEntity<List<Movie>> getMoviesByYear(String year) {
+    public ResponseEntity<List<Movie>> getMoviesByYear(@PathVariable String year) {
         return new ResponseEntity<>(movieService.getMoviesByYear(year), HttpStatus.OK);
     }
 
     @GetMapping("/moviesByRating/{rating}")
-    public ResponseEntity<List<Movie>> getMoviesByRating(String rating) {
+    public ResponseEntity<List<Movie>> getMoviesByRating(@PathVariable String rating) {
         return new ResponseEntity<>(movieService.getMoviesByRating(rating), HttpStatus.OK);
     }
 }
