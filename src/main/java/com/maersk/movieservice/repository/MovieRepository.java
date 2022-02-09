@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface MovieRepository extends JpaRepository<Movie,Integer> {
+public interface MovieRepository extends JpaRepository<Movie, Integer> {
 
     public List<Movie> findMoviesByYear(String year);
 
