@@ -1,6 +1,7 @@
 package com.maersk.movieservice.controller;
 
 import com.maersk.movieservice.model.Movie;
+import com.maersk.movieservice.service.MovieService;
 import com.maersk.movieservice.service.MovieServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,7 +15,7 @@ import java.util.List;
 public class MovieController {
 
     @Autowired
-    MovieServiceImpl movieService;
+    MovieService movieService;
 
     @PostMapping("/insert-movie")
     public ResponseEntity<Movie> createMovie(@RequestBody Movie movie) {

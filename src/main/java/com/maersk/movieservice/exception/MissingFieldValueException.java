@@ -6,10 +6,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(HttpStatus.BAD_REQUEST)
 public class MissingFieldValueException extends RuntimeException {
 
-    public MissingFieldValueException() {
-        super();
-    }
-
     public MissingFieldValueException(HttpStatus badRequest, String message) {
         super(message);
     }
